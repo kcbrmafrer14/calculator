@@ -1,10 +1,14 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
 }
 
 .container {
@@ -16,6 +20,7 @@ body {
    flex-direction: column;
    gap: 25px;
    border: 2px solid black;
+   border-radius: 25px;
 }
 
 .previous {
@@ -27,6 +32,8 @@ body {
     padding: 10px 20px;
     font-size: 25px;
     border: 2px solid black;
+    background-color: #85a694;
+    color: black;
 }
 
 .current {
@@ -38,6 +45,8 @@ body {
     padding: 10px 20px;
     font-size: 50px;
     border: 2px solid black;
+    background-color: #85a694;
+    color: black;
 }
 
 .button-container {
@@ -55,6 +64,13 @@ body {
     justify-content: center;
     border-radius: 20px;
     border: 2px solid black;
+    transition: transform .1s ease-in-out;
+    background-color:  #bfbfbf;
+}
+
+.button:hover {
+    transform: scale(1.025);
+    background-color: #999999;
 }
 
 .clear {
@@ -64,6 +80,33 @@ body {
     gap: 10px;
 }
 
+.ac, .del {
+    background-color: #cc2900 !important;
+}
+
+.ac:hover, .del:hover {
+    background-color: #991f00 !important;
+}
+
 .equal {
     grid-column: 3 / 5;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+
+}
+
+footer {
+    padding-top: 25px;
+    font-weight: bold;
+    margin: 50px;
+    color: #999999;
+    background-color: transparent;
+}
+
+#year {
+    background-color: transparent;
 }
